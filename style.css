@@ -194,6 +194,7 @@ h2 {
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   gap: 24px;
 }
 
@@ -212,11 +213,9 @@ h2 {
   grid-column: 1 / -1;
 }
 
-.card--centered {
-  grid-column: 1 / -1;
-  max-width: 560px;
-  width: 100%;
-  justify-self: center;
+.card--tall {
+  grid-column: 2;
+  grid-row: 2 / 4;
 }
 
 .card.visible {
@@ -235,9 +234,13 @@ h2 {
 .video-wrap {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 56.25%;
   overflow: hidden;
   border-radius: 18px 18px 0 0;
+}
+
+.video-wrap--vertical {
+  padding-top: 177.78%;
 }
 
 .video-wrap iframe {
