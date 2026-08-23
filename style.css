@@ -299,6 +299,21 @@ footer {
 /* ── RESPONSIVE ── */
 @media (max-width: 700px) {
   .hero { padding: 56px 20px 48px; }
-  .grid { grid-template-columns: 1fr; gap: 18px; }
   .work { padding: 0 20px 60px; }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .card--featured,
+  .card--tall {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .contact-row {
+    gap: 8px;
+  }
+  .pill {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
 }
