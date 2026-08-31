@@ -218,6 +218,14 @@ h2 {
   grid-row: 2 / 4;
 }
 
+.card--portrait-solo {
+  grid-column: 1 / -1;
+  grid-row: auto;
+  max-width: 380px;
+  width: 100%;
+  justify-self: center;
+}
+
 .card.visible {
   opacity: 1;
   transform: translateY(0);
@@ -305,9 +313,12 @@ footer {
     gap: 18px;
   }
   .card--featured,
-  .card--tall {
+  .card--tall,
+  .card--portrait-solo {
     grid-column: 1;
     grid-row: auto;
+    max-width: 100%;
+    justify-self: stretch;
   }
   .contact-row {
     gap: 8px;
