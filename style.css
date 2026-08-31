@@ -219,11 +219,15 @@ h2 {
 }
 
 .card--portrait-solo {
-  grid-column: 1 / -1;
-  grid-row: auto;
-  max-width: 380px;
-  width: 100%;
-  justify-self: center;
+  grid-column: 1;
+  grid-row: 3 / 5;
+  max-width: 100%;
+  justify-self: stretch;
+}
+
+.card--right {
+  grid-column: 2;
+  grid-row: 4;
 }
 
 .card.visible {
@@ -314,7 +318,8 @@ footer {
   }
   .card--featured,
   .card--tall,
-  .card--portrait-solo {
+  .card--portrait-solo,
+  .card--right {
     grid-column: 1;
     grid-row: auto;
     max-width: 100%;
