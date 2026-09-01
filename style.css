@@ -230,6 +230,13 @@ h2 {
   grid-row: 4;
 }
 
+.card--bottom-portrait {
+  grid-column: 1 / -1;
+  max-width: 380px;
+  width: 100%;
+  justify-self: center;
+}
+
 .card.visible {
   opacity: 1;
   transform: translateY(0);
@@ -319,7 +326,8 @@ footer {
   .card--featured,
   .card--tall,
   .card--portrait-solo,
-  .card--right {
+  .card--right,
+  .card--bottom-portrait {
     grid-column: 1;
     grid-row: auto;
     max-width: 100%;
