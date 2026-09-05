@@ -3,137 +3,342 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saif Motion — Video Editor & Motion Designer</title>
+  <title>Saif — Video Editor & Motion Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="logo.png" alt="Saif Motion" class="nav-logo-img" />
+        <span>Saif<span class="nav-logo-x">MotionX</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Let's Talk</a>
+      </div>
+      <button class="nav-burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Let's Talk</a>
+    </div>
+  </nav>
+
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-blob hero-blob--1"></div>
+      <div class="hero-blob hero-blob--2"></div>
+      <div class="hero-grid"></div>
+    </div>
     <div class="hero-inner">
-      <div class="logo-wrap">
-        <img src="logo.png" alt="Saif Motion Logo" class="logo" />
+      <div class="hero-content">
+        <div class="badge-available">
+          <span class="dot"></span> Available for freelance work
+        </div>
+        <h1 class="hero-headline">
+          Motion that makes<br><span class="grad-text">ideas move.</span>
+        </h1>
+        <p class="hero-sub">
+          Video Editor & 2D Motion Designer crafting cinematic SaaS product videos, UI animations, motion graphics, and high-retention social content.
+        </p>
+        <div class="hero-actions">
+          <a href="#work" class="btn btn--primary">View My Work</a>
+          <a href="#contact" class="btn btn--ghost">Get in Touch</a>
+        </div>
+        <div class="hero-tags">
+          <span>SaaS Videos</span>
+          <span>Motion Graphics</span>
+          <span>UI Animation</span>
+          <span>Sound Design</span>
+        </div>
       </div>
-
-      <div class="badge-available">
-        <span class="dot"></span> Available for work
+      <div class="hero-visual">
+        <div class="hv-card hv-card--main float-1">
+          <div class="hv-card-bar"></div>
+          <div class="hv-card-line"></div>
+          <div class="hv-card-line hv-card-line--short"></div>
+          <div class="hv-play">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <div class="hv-card hv-card--sm float-2">
+          <span class="hv-label">Motion Reel</span>
+          <div class="hv-waveform">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="hv-card hv-card--tag float-3">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>49s · DaBook</span>
+        </div>
+        <div class="hv-glow"></div>
       </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-      <h1>Hi, I'm <span class="accent">Saif</span></h1>
-      <h2>Video Editor & 2D Motion Graphics Designer</h2>
-      <p class="bio">
-        Crafting high-retention visual stories through dynamic 2D motion graphics, kinetic typography,
-        modern UI/UX animations, and complete audio sound design. Specializing in high-impact Reels,
-        full YouTube channel edits, and cinematic Vox-style documentaries.
-      </p>
-
-      <div class="contact-row">
-        <a href="mailto:sifedinebammarouf@gmail.com" class="pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7 10-7"/></svg>
-          Email
-        </a>
-        <a href="https://wa.me/212709840681" target="_blank" rel="noopener" class="pill">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.5l5.797-1.52A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.17-1.4l-.37-.22-3.44.9.92-3.36-.24-.38A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-          WhatsApp
-        </a>
-        <a href="https://www.instagram.com/saifmotionx" target="_blank" rel="noopener" class="pill">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          Instagram
-        </a>
-        <a href="https://vt.tiktok.com/ZSVau78uJ/" target="_blank" rel="noopener" class="pill">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
-          TikTok
-        </a>
+  <!-- ABOUT STRIP -->
+  <section class="about-strip" id="about">
+    <div class="container">
+      <div class="about-strip-inner">
+        <div class="about-left">
+          <p class="about-eyebrow">Who I am</p>
+          <h2 class="about-headline">Turning ideas into<br><em>visual experiences.</em></h2>
+        </div>
+        <div class="about-right">
+          <p>I'm Saif — a freelance video editor and 2D motion designer specializing in high-impact visual content. I create cinematic SaaS product videos, UI/UX animations, motion graphics, and social media reels that communicate clearly and look premium.</p>
+          <div class="about-caps">
+            <div class="about-cap"><span class="cap-num">01</span><span class="cap-label">Video Editing</span></div>
+            <div class="about-cap"><span class="cap-num">02</span><span class="cap-label">Motion Design</span></div>
+            <div class="about-cap"><span class="cap-num">03</span><span class="cap-label">UI Animation</span></div>
+            <div class="about-cap"><span class="cap-num">04</span><span class="cap-label">Sound Design</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- WORK -->
-  <section class="work">
-    <div class="section-header">
-      <h3>Selected Work</h3>
-      <p>A curated selection of recent projects</p>
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-label">Selected Work</div>
+      <h2 class="section-title">Projects that speak<br>for themselves.</h2>
     </div>
 
-    <div class="grid">
-
-      <div class="card card--featured" data-index="0">
-        <div class="video-wrap">
-          <iframe loading="lazy" src="https://www.youtube.com/embed/uKs66M_Qar8" title="Saif Intro & Motion Reel" allowfullscreen></iframe>
+    <!-- FEATURED: DaBook -->
+    <div class="container">
+      <div class="project-featured reveal">
+        <div class="pf-media">
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/remh6NEk-cs" title="DaBook SaaS Product Video" allowfullscreen></iframe>
+          </div>
+          <div class="pf-glow"></div>
         </div>
-        <div class="card-info">
-          <span class="tag">Motion Reel</span>
-          <h4>Saif Intro & Motion Reel</h4>
-          <p>Personal showreel showcasing 2D motion graphics & kinetic typography.</p>
-        </div>
-      </div>
-
-      <div class="card" data-index="1">
-        <div class="video-wrap">
-          <iframe loading="lazy" src="https://www.youtube.com/embed/8duAznIA2iM" title="DaBook SaaS Product Video" allowfullscreen></iframe>
-        </div>
-        <div class="card-info">
-          <span class="tag">SaaS Product Video</span>
-          <h4>DaBook</h4>
-          <p>A cinematic product video for DaBook, an all-in-one platform for creating, designing, and publishing books. Showcases its editor, layouts, templates, AI image generation, collaboration, and E-Book & KDP workflow through modern SaaS motion design.</p>
-          <a href="https://youtu.be/8duAznIA2iM" target="_blank" rel="noopener" class="watch-btn">Watch Video <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <div class="pf-info">
+          <span class="proj-tag">SaaS Product Video</span>
+          <h3 class="proj-title">DaBook</h3>
+          <p class="proj-desc">A 49-second cinematic SaaS product video created for DaBook — an all-in-one platform for creating, designing, and publishing books. Showcases the editor, layouts, templates, AI image generation, collaboration tools, and E-Book & KDP workflow through modern UI animation and motion design.</p>
+          <a href="https://youtu.be/remh6NEk-cs" target="_blank" rel="noopener" class="btn btn--primary">Watch Project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
         </div>
       </div>
+    </div>
 
-      <div class="card card--tall" data-index="3">
-        <div class="video-wrap video-wrap--vertical">
-          <iframe loading="lazy" src="https://www.youtube.com/embed/jMxEjGDwPcc" title="Gaming Store Ad" allowfullscreen></iframe>
+    <!-- PROJECT GRID -->
+    <div class="container">
+      <div class="proj-grid">
+
+        <!-- Motion Reel — large -->
+        <div class="proj-card proj-card--lg reveal" data-delay="0">
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/uKs66M_Qar8" title="Saif Intro & Motion Reel" allowfullscreen></iframe>
+          </div>
+          <div class="proj-card-info">
+            <span class="proj-tag">Motion Reel</span>
+            <h4>Saif Intro & Motion Reel</h4>
+            <p>Personal showreel showcasing 2D motion graphics & kinetic typography.</p>
+          </div>
         </div>
-        <div class="card-info">
-          <span class="tag">Gaming Ad</span>
-          <h4>Gaming Store Ad</h4>
-          <p>High-energy vertical reel ad for a gaming store with dynamic motion and sound design.</p>
+
+        <!-- Gaming Store Ad — portrait tall -->
+        <div class="proj-card proj-card--portrait reveal" data-delay="100">
+          <div class="video-wrap video-wrap--vertical">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/jMxEjGDwPcc" title="Gaming Store Ad" allowfullscreen></iframe>
+          </div>
+          <div class="proj-card-info">
+            <span class="proj-tag">Advertising</span>
+            <h4>Gaming Store Ad</h4>
+            <p>High-energy vertical reel ad with dynamic motion and sound design.</p>
+          </div>
+        </div>
+
+        <!-- School Inscription — small -->
+        <div class="proj-card reveal" data-delay="150">
+          <div class="video-wrap video-wrap--vertical">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/-zXaz2nED2M" title="School Inscription Edit" allowfullscreen></iframe>
+          </div>
+          <div class="proj-card-info">
+            <span class="proj-tag">Social Media</span>
+            <h4>School Inscription Edit</h4>
+            <p>Vertical short-form content with high-retention pacing and motion graphics.</p>
+          </div>
+        </div>
+
+        <!-- Erik Documentary — large -->
+        <div class="proj-card proj-card--lg reveal" data-delay="0">
+          <div class="video-wrap">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/oG7-rJzQ7Tc" title="Erik Weihenmayer Documentary Short" allowfullscreen></iframe>
+          </div>
+          <div class="proj-card-info">
+            <span class="proj-tag">Documentary</span>
+            <h4>Erik Weihenmayer Documentary Short</h4>
+            <p>Cinematic Vox-style documentary short with full sound design.</p>
+          </div>
+        </div>
+
+        <!-- Gen Z Brand — portrait centered -->
+        <div class="proj-card proj-card--portrait proj-card--center reveal" data-delay="100">
+          <div class="video-wrap video-wrap--vertical">
+            <iframe loading="lazy" src="https://www.youtube.com/embed/VsksZ14lR7g" title="Gen Z Brand Loyalty Breakdown" allowfullscreen></iframe>
+          </div>
+          <div class="proj-card-info">
+            <span class="proj-tag">Brand Storytelling</span>
+            <h4>Gen Z & Brand Loyalty Breakdown</h4>
+            <p>Editorial aesthetic motion design analyzing how Gen Z connects with brand identities.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="services-bg">
+      <div class="services-blob"></div>
+    </div>
+    <div class="container">
+      <div class="section-label">What I Create</div>
+      <h2 class="section-title section-title--light">Crafted for impact,<br>built for results.</h2>
+      <div class="services-grid">
+        <div class="svc-card reveal" data-delay="0">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="m10 10 5-3-5-3v6z" fill="currentColor" stroke="none"/></svg>
+          </div>
+          <span class="svc-num">01</span>
+          <h4>SaaS & Product Videos</h4>
+          <p>Cinematic product videos that showcase your platform's value through motion, UI animation, and storytelling.</p>
+        </div>
+        <div class="svc-card reveal" data-delay="100">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <span class="svc-num">02</span>
+          <h4>2D Motion Graphics</h4>
+          <p>Kinetic typography, animated infographics, logo animations, and motion-design sequences.</p>
+        </div>
+        <div class="svc-card reveal" data-delay="200">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+          </div>
+          <span class="svc-num">03</span>
+          <h4>Video Editing</h4>
+          <p>Full YouTube channel edits, Reels, documentary-style cuts, and cinematic storytelling.</p>
+        </div>
+        <div class="svc-card reveal" data-delay="300">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M6 8h.01M9 8h.01"/><rect x="12" y="7" width="6" height="5" rx="1"/></svg>
+          </div>
+          <span class="svc-num">04</span>
+          <h4>UI / UX Animation</h4>
+          <p>Interface animations, micro-interactions, and product demo animations for digital products.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="card card--portrait-solo" data-index="5">
-        <div class="video-wrap video-wrap--vertical">
-          <iframe loading="lazy" src="https://www.youtube.com/embed/-zXaz2nED2M" title="Portrait Short" allowfullscreen></iframe>
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="section-label">How I Work</div>
+      <h2 class="section-title">From concept<br>to final frame.</h2>
+      <div class="process-steps">
+        <div class="process-step reveal" data-delay="0">
+          <div class="ps-num">01</div>
+          <div class="ps-line"></div>
+          <div class="ps-content">
+            <h4>Discover</h4>
+            <p>Understand the product, audience, and message. Define the visual direction.</p>
+          </div>
         </div>
-        <div class="card-info">
-          <span class="tag">Short</span>
-          <h4>Portrait Short</h4>
-          <p>Vertical short-form content with high-retention pacing and motion graphics.</p>
+        <div class="process-step reveal" data-delay="100">
+          <div class="ps-num">02</div>
+          <div class="ps-line"></div>
+          <div class="ps-content">
+            <h4>Design</h4>
+            <p>Build the visual language, storyboard, and motion system.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="200">
+          <div class="ps-num">03</div>
+          <div class="ps-line"></div>
+          <div class="ps-content">
+            <h4>Animate</h4>
+            <p>Bring the concept to life with motion, transitions, and visual effects.</p>
+          </div>
+        </div>
+        <div class="process-step reveal" data-delay="300">
+          <div class="ps-num">04</div>
+          <div class="ps-line ps-line--last"></div>
+          <div class="ps-content">
+            <h4>Polish</h4>
+            <p>Sound design, timing refinement, color grading, and final delivery.</p>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="card card--right" data-index="2">
-        <div class="video-wrap">
-          <iframe loading="lazy" src="https://www.youtube.com/embed/oG7-rJzQ7Tc" title="Erik Weihenmayer Documentary Short" allowfullscreen></iframe>
-        </div>
-        <div class="card-info">
-          <span class="tag">Documentary</span>
-          <h4>Erik Weihenmayer Documentary Short</h4>
-          <p>Cinematic Vox-style documentary short with full sound design.</p>
+  <!-- CONTACT CTA -->
+  <section class="contact" id="contact">
+    <div class="contact-bg">
+      <div class="contact-blob contact-blob--1"></div>
+      <div class="contact-blob contact-blob--2"></div>
+    </div>
+    <div class="container">
+      <div class="contact-inner reveal">
+        <p class="contact-eyebrow">Let's work together</p>
+        <h2 class="contact-headline">Have a product<br>worth showing?</h2>
+        <p class="contact-sub">Available for freelance projects. Let's turn your idea into motion.</p>
+        <div class="contact-btns">
+          <a href="mailto:sifedinebammarouf@gmail.com" class="btn btn--primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 7 10-7"/></svg>
+            Email Me
+          </a>
+          <a href="https://wa.me/212709840681" target="_blank" rel="noopener" class="btn btn--ghost btn--light">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.5l5.797-1.52A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.51-5.17-1.4l-.37-.22-3.44.9.92-3.36-.24-.38A9.96 9.96 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://www.instagram.com/saifmotionx" target="_blank" rel="noopener" class="btn btn--ghost btn--light">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram
+          </a>
+          <a href="https://vt.tiktok.com/ZSVau78uJ/" target="_blank" rel="noopener" class="btn btn--ghost btn--light">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+            TikTok
+          </a>
         </div>
       </div>
-
-
-      <div class="card card--bottom-portrait" data-index="6">
-        <div class="video-wrap video-wrap--vertical">
-          <iframe loading="lazy" src="https://www.youtube.com/embed/VsksZ14lR7g" title="Gen Z Brand Loyalty Breakdown" allowfullscreen></iframe>
-        </div>
-        <div class="card-info">
-          <span class="tag">Brand Storytelling</span>
-          <h4>Gen Z & Brand Loyalty Breakdown</h4>
-          <p>Editorial aesthetic motion design analyzing how Gen Z connects with brand identities, featuring vintage card mockups, paper textures, and typography.</p>
-        </div>
-      </div>
-
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Saif Motion — Crafted with precision.</p>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Saif Motion" class="footer-logo" />
+        <div>
+          <strong>Saif MotionX</strong>
+          <span>Video Editor & 2D Motion Designer</span>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 Saif Motion. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
