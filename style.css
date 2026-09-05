@@ -817,11 +817,6 @@ body {
   grid-row: 3;
 }
 
-.proj-card--genz {
-  grid-column: 1;
-  grid-row: 3;
-}
-
 .proj-card--center {
   grid-column: 1 / -1;
   max-width: 400px;
@@ -1224,7 +1219,6 @@ body {
   .proj-grid { grid-template-columns: 1fr; }
   .proj-card--portrait,
   .proj-card--erik,
-  .proj-card--genz,
   .proj-card--center { grid-column: 1; grid-row: auto; max-width: 100%; justify-self: stretch; }
 
   .services-grid { grid-template-columns: 1fr 1fr; }
