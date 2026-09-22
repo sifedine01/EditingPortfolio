@@ -18,6 +18,32 @@ navMobile.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => navMobile.classList.remove('open'));
 });
 
+// Filter tabs
+document.querySelectorAll('.proj-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.proj-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.proj-card').forEach(card => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('hidden', !match);
+    });
+  });
+});
+
+// Filter tabs
+document.querySelectorAll('.proj-filter').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.proj-filter').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.proj-card').forEach(card => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.classList.toggle('hidden', !match);
+    });
+  });
+});
+
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal, .proj-card, .svc-card, .process-step');
 
