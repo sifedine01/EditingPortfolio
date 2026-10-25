@@ -73,11 +73,21 @@ body {
   letter-spacing: -0.02em;
 }
 
-.nav-logo-img {
+.brand-mark {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  object-fit: cover;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  box-shadow: 0 4px 12px rgba(23,105,255,0.28);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.08em;
 }
 
 .nav-logo-x { color: var(--blue); }
@@ -1231,11 +1241,11 @@ body {
   gap: 12px;
 }
 
-.footer-logo {
+.brand-mark--footer {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  object-fit: cover;
+  font-size: 1.1rem;
 }
 
 .footer-brand strong {
