@@ -18,31 +18,60 @@ navMobile.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => navMobile.classList.remove('open'));
 });
 
-// Filter tabs
-document.querySelectorAll('.proj-filter').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.proj-filter').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.proj-card').forEach(card => {
-      const match = filter === 'all' || card.dataset.category === filter;
-      card.classList.toggle('hidden', !match);
-    });
+const projectGrid = document.querySelector('.proj-grid');
+
+// Position each project in the shortest column, then repeat on filtering and resize.
+function layoutProjects() {
+  if (!projectGrid) return;
+
+  const styles = getComputedStyle(projectGrid);
+  const columns = Number.parseInt(styles.getPropertyValue('--masonry-columns'), 10) || 1;
+  const gap = Number.parseFloat(styles.getPropertyValue('--masonry-gap')) || 20;
+  const columnHeights = Array(columns).fill(0);
+
+  projectGrid.querySelectorAll('.proj-card:not(.hidden)').forEach(card => {
+    const column = columnHeights.indexOf(Math.min(...columnHeights));
+    const x = column * (card.offsetWidth + gap);
+    const y = columnHeights[column];
+    card.style.left = `${x}px`;
+    card.style.top = `${y}px`;
+    columnHeights[column] += card.offsetHeight + gap;
   });
-});
+
+  projectGrid.style.height = `${Math.max(...columnHeights, 0) - (columnHeights.some(Boolean) ? gap : 0)}px`;
+}
+
+const projectFilters = { format: 'all', type: 'all' };
 
 // Filter tabs
 document.querySelectorAll('.proj-filter').forEach(btn => {
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.proj-filter').forEach(b => b.classList.remove('active'));
+    const filterGroup = btn.dataset.filterGroup;
+    document.querySelectorAll(`.proj-filter[data-filter-group="${filterGroup}"]`).forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
-    const filter = btn.dataset.filter;
+    btn.setAttribute('aria-pressed', 'true');
+    projectFilters[filterGroup] = btn.dataset.filter;
     document.querySelectorAll('.proj-card').forEach(card => {
-      const match = filter === 'all' || card.dataset.category === filter;
+      const categories = (card.dataset.categories || '').split(' ');
+      const formatMatches = projectFilters.format === 'all' || card.dataset.format === projectFilters.format;
+      const typeMatches = projectFilters.type === 'all' || categories.includes(projectFilters.type);
+      const match = formatMatches && typeMatches;
       card.classList.toggle('hidden', !match);
     });
+    requestAnimationFrame(layoutProjects);
   });
 });
+
+let masonryResizeFrame;
+window.addEventListener('resize', () => {
+  cancelAnimationFrame(masonryResizeFrame);
+  masonryResizeFrame = requestAnimationFrame(layoutProjects);
+});
+
+requestAnimationFrame(layoutProjects);
 
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal, .proj-card, .svc-card, .process-step');
